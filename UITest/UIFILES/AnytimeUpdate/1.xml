@@ -1,0 +1,86 @@
+<duixml>
+<stylesheets>
+<style resid="WAUStyle">
+<if class="cp_content_text">
+<Element font="9;;;Segoe UI;ClearType" foreground="themeable(RGB(255,255,255), WindowText)" accessible="true" accRole="statictext"/>
+</if>
+<if class="cp_content_title">
+<Element font="9;Bold;;Segoe UI;ClearType" foreground="themeable(RGB(255,255,255), WindowText)" accessible="true" accRole="statictext"/>
+</if>
+<if class="wau_header_title">
+<Element font="15;;;Segoe UI;ClearType" foreground="themeable(RGB(255,255,255), WindowText)" accessible="true" accRole="statictext"/>
+</if>
+<if class="wau_title">
+<Element font="12;;;Segoe UI;ClearType" foreground="themeable(RGB(0,51,153), WindowText)" accessible="true" accRole="statictext"/>
+</if>
+<if class="wau_sub_title">
+<Element font="11;;;Segoe UI;ClearType" foreground="themeable(RGB(0,0,0), WindowText)" accessible="true" accRole="statictext"/>
+</if>
+<if class="wau_text">
+<Element font="9;;;Segoe UI;ClearType" foreground="themeable(RGB(0,0,0), WindowText)" accessible="true" accRole="statictext"/>
+</if>
+<ccpushbutton font="themeable(gtf(CONTROLPANELSTYLE, 6, 0), &quot;9;;;Segoe UI;ClearType&quot;)" foreground="themeable(gtc(CONTROLPANELSTYLE,6,0,3803), ButtonText)" accessible="true" accRole="pushbutton"/>
+<CCSysLink font="themeable(gtf(CONTROLPANELSTYLE,7,1), &quot;9;;;Segoe UI;ClearType&quot;)" foreground="themeable(gtc(CONTROLPANELSTYLE,7,1,3803), WindowText)" background="themeable(dtb(CONTROLPANEL,2,0), window)" transparent="true" accessible="true" accrole="link"/>
+<CCCommandLink transparent="true" accessible="true" accrole="pushbutton" accdefaction="press"/>
+<if class="ScrollViewer">
+<CCHScrollBar layoutpos="ninebottom" accessible="true" accrole="scrollbar"/>
+<CCVScrollBar layoutpos="nineright" accessible="true" accrole="scrollbar"/>
+<viewer layoutpos="nineclient"/>
+</if>
+<if class="wau_help_link">
+<AccessibleButton accessible="true" accRole="link" accdefaction="click" foreground="themeable(gtc(CONTROLPANELSTYLE,7,1,3803), HotLight)" font="themeable(gtf(CONTROLPANELSTYLE,7,1), &quot;9;;;Segoe UI;ClearType&quot;)" overhang="false" contentalign="wrapleft"/>
+<element accessible="true" accRole="link" accdefaction="click" foreground="themeable(gtc(CONTROLPANELSTYLE,7,1,3803), HotLight)" font="themeable(gtf(CONTROLPANELSTYLE,7,1), &quot;9;;;Segoe UI;ClearType&quot;)" overhang="false"/>
+<if keyfocused="true">
+<AccessibleButton contentalign="wrapleft | focusrect"/>
+<element contentalign="wrapleft | focusrect"/>
+</if>
+<if mousefocused="true">
+<AccessibleButton cursor="hand" foreground="themeable(gtc(CONTROLPANELSTYLE,7,2,3803), HotLight)" font="themeable(gtf(CONTROLPANELSTYLE,7,2), &quot;9;;Underline;Segoe UI;ClearType&quot;)"/>
+<element cursor="hand" foreground="themeable(gtc(CONTROLPANELSTYLE,7,2,3803), HotLight)" font="themeable(gtf(CONTROLPANELSTYLE,7,2), &quot;9;;Underline;Segoe UI;ClearType&quot;)"/>
+</if>
+</if>
+<edit transparent="true" themedborder="true" accessible="true" accrole="text" height="25rp" font="9;;;Courier New Bold;ClearType" foreground="RGB(0,0,0)"/>
+<if id="atom(action_Back)">
+<AccessibleButton Background="argb(0, 0, 0, 0)" ContentAlign="MiddleCenter" Height="themeable(gtmet(Navigation, 1, 0, 2417), 30)" LayoutPos="left" ToolTip="true" Margin="rect(14rp, 0rp, 0rp, 0rp)" Width="themeable(gtmet(Navigation, 1, 0, 2416), 30)" accessible="true" accRole="pushbutton" accdefaction="click" accname="resstr(51)" accdesc="resstr(51)"/>
+<if enabled="true">
+<AccessibleButton Content="themeable(dtb(Navigation, 1, 1), resbmp(145, 2, -1, 0, 0, 1, 1))"/>
+</if>
+<if mousefocused="true">
+<AccessibleButton Content="themeable(dtb(Navigation, 1, 2), resbmp(144, 2, -1, 0, 0, 1, 1))"/>
+</if>
+<if keyfocused="true">
+<AccessibleButton ContentAlign="middlecenter | focusrect"/>
+</if>
+<if enabled="false">
+<AccessibleButton Content="themeable(dtb(Navigation, 1, 4), resbmp(143, 2, -1, 0, 0, 1, 1))"/>
+</if>
+<if pressed="true">
+<AccessibleButton Content="themeable(dtb(Navigation, 1, 3), resbmp(146, 2, -1, 0, 0, 1, 1))"/>
+</if>
+</if>
+<if id="atom(action_Lock)">
+<if keyfocused="true">
+<AccessibleButton ContentAlign="middlecenter | focusrect"/>
+</if>
+</if>
+</style>
+</stylesheets>
+<Element resid="main" id="atom(main)" sheet="WAUStyle" layout="borderlayout()" layoutpos="client">
+<Element LayoutPos="top" layout="borderlayout()">
+<Element LayoutPos="client" layout="borderlayout()" minsize="size(0rp, 51rp)" padding="rect(5rp,0,0,0)" background="themeable(gradient(RGB(69,110,148), RGB(56,112,184), RGB(97,142,198), 3), Window)">
+<AccessibleButton ID="atom(action_Back)"/>
+<Element content="icon(1, 24rp, 24rp)" ContentAlign="MiddleCenter" padding="rect(14rp,5rp,0,0)" background="argb(0,0,0,0)" layoutpos="left"/>
+<Element layoutpos="left" class="wau_header_title" padding="rect(2rp,0,0,0)" background="argb(0,0,0,0)" contentalign="middleleft" content="resstr(1101)"/>
+<Element id="atom(SKU_Info)" layoutpos="right" layout="borderlayout()" padding="rect(0,10rp,14rp,0)" background="ARGB(0,0,0,0)"> 
+<Element layoutpos="top" class="cp_content_text" content="resstr(1100)"/>
+<Element id="atom(SKU_Name)" layoutpos="top" class="cp_content_title"/>
+</Element>
+</Element>
+</Element>
+<Element layout="borderlayout()" layoutpos="client">
+<ScrollViewer layoutpos="client" xscrollable="false">
+<Element id="atom(Page_Root)" layout="borderlayout()" layoutpos="client"/>
+</ScrollViewer>
+</Element>
+</Element>
+</duixml>
